@@ -116,7 +116,10 @@ public class TileJsonBuilder {
 
         for (Field field : this.getClass().getDeclaredFields()) {
             try {
-                tileJson.put(field.getName(), field.get(this));
+                Object val = field.get(this);
+                if (val != null) {
+                    tileJson.put(field.getName(), val);
+                }
             } catch (IllegalAccessException e) {
                 //unreachable
                 throw new RuntimeException("Cannot build TileJson.", e);
