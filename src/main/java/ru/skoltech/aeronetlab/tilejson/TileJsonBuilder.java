@@ -1,4 +1,4 @@
-package main.java.ru.skoltech.aeronetlab.tilejson;
+package ru.skoltech.aeronetlab.tilejson;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
